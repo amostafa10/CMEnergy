@@ -1,5 +1,4 @@
 import pandas as pd
-import conda
 import yfinance as yf
 import csv
 data = yf.download("CL=F", start="2010-01-01", end="2024-12-30")
