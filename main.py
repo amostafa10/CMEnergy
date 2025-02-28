@@ -1,5 +1,6 @@
-import yfinance as yf
+import matplotlib.pyplot as plt
+import pandas as pd
 
-result = yf.download("CL=F", start="2024-12-01", end="2025-2-20")
+data = pd.read_csv("yahoocrudeoildata.csv", delim_whitespace=True)
 
-result.to_csv('test.csv', index=True)
+data['Date'] = pd.to_datetime(data['Date'])
