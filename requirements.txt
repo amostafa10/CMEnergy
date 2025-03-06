@@ -7,3 +7,5 @@ sklearn
 numpy
 matplotlib
 pmdarima
+darts
+auto-ts
