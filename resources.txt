@@ -1,0 +1,4 @@
+# https://www.geeksforgeeks.org/sarima-seasonal-autoregressive-integrated-moving-average/
+# https://medium.com/@tirthamutha/time-series-forecasting-using-sarima-in-python-8b75cd3366f2
+# https://neptune.ai/blog/arima-sarima-real-world-time-series-forecasting-guide
+# https://www.machinelearningmastery.com/sarima-for-time-series-forecasting-in-python/
