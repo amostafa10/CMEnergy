@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Get our data
-csv_path = 'yahoocrudeoildata.csv'
+csv_path = 'data/yahoo_finance_2024.csv'
 data = pd.read_csv(
     csv_path,
     parse_dates=['Date'],  # Parse the dates
