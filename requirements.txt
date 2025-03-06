@@ -6,3 +6,4 @@ statsmodels
 sklearn
 numpy
 matplotlib
+pmdarima
