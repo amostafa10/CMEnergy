@@ -2,3 +2,7 @@ yfinance
 torch
 pygooglenews
 transformers
+statsmodels
+sklearn
+numpy
+matplotlib

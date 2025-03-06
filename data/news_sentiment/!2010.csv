@@ -1,0 +1,37 @@
+count,sentiment,date,title
+1,-1,"Wed, 13 Jan 2010 08:00:00 GMT",The Start of Demand Destruction for Oil? - Supply Chain Digest
+2,1,"Mon, 17 May 2010 07:00:00 GMT",Nestlé uses NGO to clean up palm oil supply chain - The Guardian
+3,1,"Wed, 07 Apr 2010 07:00:00 GMT",Unilever backtracks: may purchase palm oil from Sinar Mas - Mongabay.com
+4,-1,"Thu, 24 Jun 2010 07:00:00 GMT",The other oil spill - The Economist
+5,1,"Fri, 01 Jan 2010 08:00:00 GMT",Your Next Supply Chain - MIT Sloan Management Review
+6,-1,"Tue, 04 May 2010 07:00:00 GMT",The truth about Cargill’s palm oil plantations in Borneo - Rainforest Action Network
+7,-1,"Sat, 16 Oct 2010 07:00:00 GMT",The abandonment of technology - Resilience
+8,1,"Mon, 08 Mar 2010 08:00:00 GMT",Six Industries in Search of Survival - strategy+business Today
+9,1,"Sun, 17 Jan 2010 08:00:00 GMT",Fill 'er up: McFarland oil tanks are a lifeblood - The Capital Times
+10,1,"Wed, 22 Sep 2010 07:00:00 GMT","Amid Tension, China Blocks Vital Exports to Japan (Published 2010) - The New York Times"
+11,1,"Sun, 18 Jul 2010 07:00:00 GMT","Experts fear long oil effect on marine life, food chain - Phys.org"
+12,1,"Fri, 04 Jun 2010 07:00:00 GMT",Supply Chain Graphic of the Week: Revisiting Peak Oil - Supply Chain Digest
+13,1,"Fri, 01 Jan 2010 08:00:00 GMT",Minding the Supply Savings Gaps - MIT Sloan Management Review
+14,1,"Wed, 27 Oct 2010 07:00:00 GMT",Walmart Goes Out On A Limb: Sustainable Palm Oil By 2015 - Rainforest Action Network
+15,1,"Thu, 21 Oct 2010 07:00:00 GMT","Corporations, conservation, and the green movement - Mongabay.com"
+16,1,"Fri, 17 Sep 2010 07:00:00 GMT",The Difference Engine: More precious than gold - The Economist
+17,1,"Thu, 18 Mar 2010 07:00:00 GMT",Nestlé stars in smear campaign over Indonesian palm oil - The Guardian
+18,1,"Mon, 18 Oct 2010 07:00:00 GMT",Walmart takes on Amazon deforestation - Mongabay.com
+19,1,"Wed, 06 Oct 2010 07:00:00 GMT",The Nestlé example: how responsible companies could end deforestation - Mongabay.com
+20,1,"Thu, 22 Jul 2010 07:00:00 GMT",How Greenpeace changes big business - Mongabay.com
+21,1,"Thu, 01 Jul 2010 07:00:00 GMT",The right way to hedge - McKinsey
+22,1,"Thu, 01 Apr 2010 07:00:00 GMT",About 'Planet Money' - NPR
+23,1,"Thu, 11 Feb 2010 08:00:00 GMT",Jordans cereals switches to 'sustainable' palm oil - The Ecologist
+24,1,"Thu, 27 May 2010 07:00:00 GMT","Whole Foods Says No to Krill Oil Sales, Aker Confirms MSC Certification - WholeFoods Magazine"
+25,0,"Thu, 18 Feb 2010 08:00:00 GMT",Deepening Chinese Stakes in West Africa: The Case of Ghana - The Jamestown Foundation
+26,0,"Tue, 30 Nov 2010 08:00:00 GMT",Singapore: Leadership in Pro-Active Thinking - Oil & Gas Journal
+27,1,"Mon, 17 May 2010 07:00:00 GMT",Greenpeace Social Media Campaign Forces Nestlé To Stop Using Unsustainable Palm Oil - Fast Company
+28,0,"Wed, 19 May 2010 07:00:00 GMT",Online protest drives Nestlé to environmentally friendly palm oil - The Independent
+29,1,"Thu, 18 Mar 2010 07:00:00 GMT",Greenpeace attacks Nestlé with 'Kit Kat' viral - Campaign US
+30,0,"Fri, 22 Oct 2010 07:00:00 GMT",Toyota Tsusho Establishing Global Integrated Supply Chain for bio-PET - Green Car Congress
+31,-1,"Fri, 19 Mar 2010 07:00:00 GMT",Nestlé under fire for destroying orang-utan habitat - The Ecologist
+32,1,"Tue, 21 Sep 2010 07:00:00 GMT","America's Biggest Companies, Then and Now (1955 to 2010) - 24/7 Wall St."
+33,1,"Wed, 17 Mar 2010 07:00:00 GMT",Orangutan plight protest at Nestle in York and Croydon - CBBC Newsround
+34,1,"Mon, 22 Feb 2010 08:00:00 GMT",Palm oil products and the weekly shop - CBBC Newsround
+35,1,"Wed, 03 Feb 2010 08:00:00 GMT",Barloworld Logistics confirms Dubai alliance - Logistics Middle East
+36,0,"Fri, 09 Apr 2010 07:00:00 GMT",Why fuel crisis hit Uganda - New Vision

@@ -1,0 +1,93 @@
+count,sentiment,date,title
+1,1,"Fri, 29 Oct 2021 07:00:00 GMT","West Texas crude oil will likely trade above $80 per barrel through the end of the year, energy analysts say - Houston Public Media"
+2,-1,"Mon, 15 Nov 2021 08:00:00 GMT","As energy prices soar, supply chain snags threaten U.S. oil output gains - Reuters"
+3,1,"Wed, 20 Jan 2021 08:00:00 GMT",The crude tall oil value chain: Global availability and the influence of regional energy policies - ScienceDirect.com
+4,-1,"Thu, 21 Oct 2021 07:00:00 GMT",Surging Energy Prices May Not Ease Until Next Year - International Monetary Fund
+5,1,"Fri, 17 Sep 2021 07:00:00 GMT","WWF research maps out palm oil trade flows from six key landscapes in Asia, in bid to improve traceability - WWF"
+6,1,"Tue, 31 Aug 2021 07:00:00 GMT",Advancing Supply Chain Security in Oil and Gas: An Industry Analysis - World Economic Forum
+7,-1,"Wed, 07 Jul 2021 07:00:00 GMT",Rising Oil and Gas Prices Add to U.S. Economic Challenges (Published 2021) - The New York Times
+8,1,"Thu, 20 May 2021 07:00:00 GMT",What different scenarios tell us about the future of oil and gas - Wood Mackenzie
+9,0,"Wed, 09 Jun 2021 07:00:00 GMT",Improving Oil Supply Security: Using a Risk Optimization Model to China and India - Wiley Online Library
+10,1,"Wed, 25 Aug 2021 07:00:00 GMT",30 years on: How the collapse of the Soviet Union transformed Russia into a global oil and gas powerhouse - S&P Global
+11,1,"Fri, 18 Jun 2021 18:48:00 GMT","Texas winter deep freeze broke refining, petrochemical supply chains - Federal Reserve Bank of Dallas"
+12,1,"Wed, 08 Sep 2021 07:00:00 GMT","Palm oil, straight from the source(s) - Walgreens Boots Alliance"
+13,0,"Tue, 22 Jun 2021 07:00:00 GMT","Creating Resilience, Sustainability, and Accountability in Supply Chains - Bain & Company"
+14,1,"Mon, 01 Nov 2021 07:00:00 GMT",Data-driven platform looks to clear up fog of palm oil traceability - Mongabay.com
+15,1,"Fri, 20 Aug 2021 07:00:00 GMT",Energy and health care are two sides of the same coin - ExxonMobil
+16,-1,"Thu, 25 Nov 2021 08:00:00 GMT",Japan refiners dust off fuel oil supply chains to meet rising utility demand - Reuters
+17,1,"Wed, 25 Aug 2021 07:00:00 GMT",How the oil and gas industry can take a lifecycle approach to reducing emissions - World Economic Forum
+18,0,"Sat, 15 May 2021 07:00:00 GMT",A multi-objective optimisation model to reduce greenhouse gas emissions and costs in offshore natural gas upstream chains - ScienceDirect.com
+19,1,"Mon, 17 May 2021 07:00:00 GMT",Here are 6 ways the energy sector can act on cyber threats - World Economic Forum
+20,-1,"Wed, 01 Sep 2021 07:00:00 GMT",Extensive Ida storm damage hurts oil industry recovery effort - Reuters
+21,1,"Wed, 22 Sep 2021 07:00:00 GMT",EV Impact: Electric vehicle growth to sever oil from key market - S&P Global
+22,1,"Thu, 10 Jun 2021 07:00:00 GMT",Inside Mars' zero deforestation palm oil strategy - GreenBiz
+23,1,"Wed, 24 Nov 2021 08:00:00 GMT",Strategies for OFSE companies confronting the energy transition - McKinsey
+24,0,"Tue, 15 Jun 2021 07:00:00 GMT","As oil prices skyrocket, energy sector stocks rally after disastrous 2020 - S&P Global"
+25,1,"Thu, 29 Jul 2021 07:00:00 GMT",The U.S. Remained The World’s Top Oil Producer In 2020 - Forbes
+26,1,"Thu, 07 Oct 2021 07:00:00 GMT",The true price of palm oil - Global Witness
+27,1,"Sun, 04 Apr 2021 01:59:17 GMT",Oil and Gas Petrochemicals logistics - CEVA Logistics
+28,1,"Wed, 26 May 2021 07:00:00 GMT",How the sharing economy can transform asset-heavy industries - World Economic Forum
+29,1,"Wed, 17 Mar 2021 07:00:00 GMT",Manufacturing energy and greenhouse gas emissions associated with plastics consumption - ScienceDirect.com
+30,1,"Thu, 13 May 2021 07:00:00 GMT",The Future of Houston as Energy Transitions - Baker Institute
+31,1,"Mon, 04 Jan 2021 08:00:00 GMT","Agribusiness giants ADM, Bunge trading in ‘conflict’ palm oil, report says - Mongabay.com"
+32,-1,"Wed, 20 Jan 2021 08:00:00 GMT",Oil and Gas Supply Chain Awards Hit a 16-Year Low - Society of Petroleum Engineers (SPE)
+33,-1,"Tue, 27 Apr 2021 07:00:00 GMT",Stalemate: sustainable palm oil struggles to take off in China - China Dialogue Ocean.
+34,1,"Thu, 11 Feb 2021 08:00:00 GMT",Indonesia’s top palm oil deforesters are the usual shady suspects: Report - Mongabay.com
+35,1,"Sat, 02 Oct 2021 07:00:00 GMT",How Oil and Gas Industry is Implementing Change Management Strategies - Supply and Demand Chain Executive
+36,1,"Sun, 10 Jan 2021 08:00:00 GMT","Comparative life cycle assessment of sustainable energy carriers including production, storage, overseas transport and utilization - ScienceDirect.com"
+37,1,"Wed, 10 Nov 2021 08:00:00 GMT",Interesting: Tennessee Produces 165K Barrels of Oil - Wgnsradio
+38,1,"Mon, 08 Mar 2021 16:22:42 GMT",Discover 5 Top Oil & Gas Supply Chain Management Startups - StartUs Insights
+39,1,"Fri, 30 Jul 2021 07:00:00 GMT",Why This Food Company Is Developing An Avocado Supply Chain In Ethiopia - Forbes
+40,-1,"Thu, 30 Dec 2021 08:00:00 GMT","China’s reliance on Middle East oil, gas to rise sharply - Asia Times"
+41,1,"Mon, 15 Feb 2021 08:00:00 GMT",What Keystone pipeline cancellation means for crude-by-rail - FreightWaves
+42,1,"Mon, 26 Apr 2021 07:00:00 GMT",Bunge needs to urgently address deforestation and human rights abuses - Global Witness
+43,1,"Mon, 08 Feb 2021 08:00:00 GMT","Bext360: Blockchain for a Transparent, Sustainable Supply Chain - Techstars"
+44,1,"Thu, 24 Jun 2021 07:00:00 GMT","Trade group introduces template for oil, gas to report greenhouse gas emissions - S&P Global"
+45,-1,"Tue, 30 Mar 2021 07:00:00 GMT",The Bad Egg in the Box - Rainforest Action Network
+46,1,"Thu, 30 Sep 2021 07:00:00 GMT",A new approach to managing third-party risks - World Economic Forum
+47,1,"Mon, 29 Nov 2021 08:00:00 GMT",Supply chain alliance supports Buzzard Phase II achieve first oil - Subsea 7
+48,-1,"Thu, 21 Jan 2021 08:00:00 GMT",Making Conflict Palm Oil History - The Understory - Rainforest Action Network
+49,1,"Tue, 07 Dec 2021 06:20:12 GMT",Investors to Palm Oil Producers: “Stick to RSPO principles” - WWF
+50,0,"Mon, 15 Nov 2021 08:00:00 GMT",3D Printing Could Transform The Oil And Gas Industry - OilPrice.com
+51,1,"Mon, 01 Feb 2021 08:00:00 GMT",6 steps to protect and safeguard children’s rights in the palm oil industry - GreenBiz
+52,1,"Wed, 12 May 2021 07:00:00 GMT",Amazon Case Study: Natura’s Supply Chain - Americas Quarterly
+53,1,"Fri, 18 Jun 2021 07:00:00 GMT",Can the Indian market move towards a sustainable palm oil supply chain? - Mongabay-India
+54,-1,"Thu, 13 May 2021 07:00:00 GMT",Cyberattack Forces a Shutdown of a Top U.S. Pipeline (Published 2021) - The New York Times
+55,-1,"Tue, 13 Jul 2021 07:00:00 GMT",Top brands failing to spot rights abuses on Indonesian oil palm plantations - Mongabay.com
+56,-1,"Thu, 22 Apr 2021 07:00:00 GMT","Report: Power Outages Greatly Impacted Natural Gas Production, Transportation During Texas Winter Storm - Energy In Depth"
+57,0,"Thu, 04 Nov 2021 07:00:00 GMT",Food vs. fuel debate reemerges over soy oil - Farm Progress
+58,1,"Tue, 27 Apr 2021 07:00:00 GMT",North Korea’s Oil Procurement Networks - The Diplomat
+59,1,"Thu, 18 Feb 2021 08:00:00 GMT",An illustrated history of industrial palm oil - China Dialogue Ocean.
+60,-1,"Sun, 18 Jul 2021 07:00:00 GMT",The vulnerable points in South Africa’s fuel supply chain - The Conversation
+61,0,"Sat, 06 Mar 2021 08:00:00 GMT",11 Best Oil Tanker Stocks To Buy Now - Yahoo Finance
+62,1,"Sun, 18 Apr 2021 07:00:00 GMT",Saudi Aramco Explores Supply Chain Finance Initiative - PYMNTS.com
+63,-1,"Sat, 27 Mar 2021 07:00:00 GMT",Suez Canal mishap puts battered supply chains under more pressure - The Washington Post
+64,0,"Tue, 22 Jun 2021 07:00:00 GMT",Nestlé Enhances Supply Chain Sustainability Efforts with Forest Positive Strategy - ESG Today
+65,-1,"Tue, 08 Jun 2021 07:00:00 GMT","The FBI recovered most of Colonial Pipeline’s ransom, but the ransomware threat remains - Vox.com"
+66,1,"Fri, 22 Jan 2021 08:00:00 GMT",Why the U.S. isn't in desperate need of the Keystone XL pipeline - CBC.ca
+67,1,"Tue, 21 Dec 2021 08:00:00 GMT","Bringing Blockchain, IoT, and Analytics to Supply Chains - HBR.org Daily"
+68,1,"Thu, 29 Apr 2021 07:00:00 GMT",The Malaysian Sustainable Palm Oil (MSPO) certification is redefining the responsible supply chain - The Parliament Magazine
+69,0,"Tue, 30 Nov 2021 08:00:00 GMT",API's new 3D printing standard to help “strengthen the supply chain resiliency” of oil and gas firms - 3D Printing Industry
+70,-1,"Thu, 23 Sep 2021 07:00:00 GMT",Autumn 2000: when fuel shortages brought UK to virtual standstill | Supply chain crisis - The Guardian
+71,1,"Tue, 26 Jan 2021 08:00:00 GMT",How to Make Sure the Palm Oil in the Products You Buy Is Ethical and Sustainable - Global Citizen
+72,0,"Wed, 24 Nov 2021 16:16:52 GMT",ISO 29001 Oil and gas certification - LRQA
+73,1,"Tue, 17 Aug 2021 07:00:00 GMT","Green Supply Chain Management, Environmental Degradation, and Energy: Evidence from Asian Countries - Wiley Online Library"
+74,1,"Mon, 10 May 2021 07:00:00 GMT",Taking on the circular economy in oil and gas - Offshore Technology
+75,1,"Fri, 26 Mar 2021 07:00:00 GMT",After the Ever Given: what the ship wedged in the Suez Canal means for global trade - University of Sydney
+76,1,"Wed, 12 May 2021 07:00:00 GMT","The net zero workforce: Oil, gas & chemicals - Deloitte"
+77,1,"Wed, 22 Dec 2021 08:00:00 GMT",Ferrero publishes latest transparency lists of palm oil supply sources - Confectionery Production
+78,1,"Wed, 27 Jan 2021 08:00:00 GMT",Renewable fuels set to take off - CSIRO
+79,1,"Mon, 25 Jan 2021 08:00:00 GMT",bp completes integrated gas value chain in China with delivery of LNG for downstream customers - BP
+80,1,"Mon, 18 Oct 2021 07:00:00 GMT",What’s the Real Cost of Papua New Guinea’s Palm Oil? - The Diplomat
+81,1,"Thu, 23 Sep 2021 07:00:00 GMT",Meet the founder: Releaf’s Ikenna Nzewi wants Nigerian palm oil to be the next big thing - AgFunderNews
+82,-1,"Wed, 10 Feb 2021 08:00:00 GMT","Australia loses another oil refinery, leaving our fuel supply vulnerable to regional crises - ABC News"
+83,0,"Thu, 02 Dec 2021 08:00:00 GMT",3D Printing Set to Transform Oil & Gas Industry - All3DP
+84,0,"Mon, 11 Jan 2021 08:00:00 GMT",Making palm oil more sustainable - Bangkok Post
+85,1,"Thu, 23 Sep 2021 07:00:00 GMT",BP closes some sites due to lorry driver shortage - BBC.com
+86,0,"Wed, 24 Mar 2021 07:00:00 GMT",North Sea deal to protect jobs in green energy transition - GOV.UK
+87,-1,"Tue, 25 May 2021 07:00:00 GMT",Fast fashion needs to slow down for the climate - Climate Council
+88,0,"Thu, 19 Aug 2021 07:00:00 GMT",Six fmcg companies leading the way on sustainable palm oil - The Grocer
+89,-1,"Tue, 23 Nov 2021 08:00:00 GMT",Supply chain issues will pass - Barbados Advocate
+90,1,"Mon, 29 Mar 2021 07:00:00 GMT",New energy transition and supply chain manager appointed at Scottish Renewables - Scottish Construction Now
+91,1,"Wed, 29 Sep 2021 07:00:00 GMT",Together for change in palm oil production - CNV Internationaal
+92,1,"Tue, 20 Jul 2021 07:00:00 GMT",SA's largest crude oil refinery to restart after shutdown during unrest - News24

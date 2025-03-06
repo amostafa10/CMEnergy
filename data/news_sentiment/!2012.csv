@@ -1,0 +1,42 @@
+count,sentiment,date,title
+1,1,"Thu, 01 Mar 2012 08:00:00 GMT",Review of developments in crude oil and product markets over the past two months - EIA
+2,1,"Mon, 27 Aug 2012 07:00:00 GMT",Traceability in the Oil & Gas Industry - Supply and Demand Chain Executive
+3,1,"Tue, 18 Dec 2012 08:00:00 GMT",The Carbon Contained in Global Oils - Carnegie Endowment for International Peace
+4,0,"Mon, 05 Mar 2012 08:00:00 GMT",Bringing growth to Brazilian shores - World Economic Forum
+5,1,"Thu, 09 Feb 2012 08:00:00 GMT",The new geography of trade - Al Jazeera English
+6,1,"Tue, 26 Jun 2012 07:00:00 GMT",Energy security: challenges and needs - Sovacool - 2012 - WIREs Energy and Environment - Wiley Online Library
+7,-1,"Fri, 14 Dec 2012 08:00:00 GMT",Cutting through the rhetoric on palm oil production - Mongabay.com
+8,1,"Mon, 14 May 2012 07:00:00 GMT",Corporate Social Responsibility in the Supply Chain - IndustryWeek
+9,-1,"Tue, 19 Jun 2012 07:00:00 GMT",Australia’s growing oil imports are an energy security issue - theconversation.com
+10,1,"Tue, 13 Mar 2012 07:00:00 GMT",The $110 Effect: What Higher Gas Prices Could Really Do to the Economy - The Atlantic
+11,0,"Mon, 22 Oct 2012 07:00:00 GMT",U.S. Fossil Fuel Production Will Reach All-time High This Year; America's Energy Self-sufficiency Will Be Highest Since 1990 - American Enterprise Institute
+12,1,"Mon, 09 Apr 2012 07:00:00 GMT",Chevron Promotes Two Downstream - CSPDailyNews.com
+13,0,"Tue, 13 Mar 2012 07:00:00 GMT",Outlook is Optimistic for Investment in Global Offshore Oil and Gas - Society of Petroleum Engineers (SPE)
+14,1,"Thu, 03 May 2012 07:00:00 GMT",Understanding Unconventional Oil - Carnegie Endowment for International Peace
+15,0,"Tue, 30 Oct 2012 07:00:00 GMT",Eight Key Levers for Effective Large-Capex-Project Management - BCG
+16,1,"Thu, 15 Mar 2012 07:00:00 GMT",| Nearshoring Latin America: A Closer Look - Inbound Logistics
+17,1,"Tue, 05 Jun 2012 07:00:00 GMT","AWEA, German industry group partners on wind supply chain development - Power Engineering®️"
+18,1,"Mon, 04 Jun 2012 07:00:00 GMT",NOAA predicts a near-normal 2012 Atlantic hurricane season - EIA
+19,-1,"Tue, 05 Jun 2012 07:00:00 GMT",The Challenges of Unconventional Oil - Carnegie Endowment for International Peace
+20,1,"Thu, 29 Nov 2012 08:00:00 GMT",Managing the Unconventional Oil and Gas Bonanza - Carnegie Endowment for International Peace
+21,1,"Tue, 04 Sep 2012 07:00:00 GMT",Intel Embraces Submerging Servers in Oil - Data Center Knowledge
+22,1,"Thu, 01 Mar 2012 08:00:00 GMT",Havana urban farming - WWF
+23,1,"Sat, 12 May 2012 07:00:00 GMT","Brazil, Venezuela, and Mexico: three ways to nationalize oil - The Christian Science Monitor"
+24,1,"Mon, 03 Dec 2012 08:00:00 GMT",How Nestlé dealt with a social media campaign against it - Financial Times
+25,-1,"Wed, 05 Dec 2012 08:00:00 GMT",Why the Coconut Craze Isn’t Helping Farmers - Time Magazine
+26,0,"Wed, 26 Dec 2012 08:00:00 GMT",Iraq’s oil production to boom over coming decades - Oil and Gas Middle East
+27,1,"Mon, 10 Dec 2012 08:00:00 GMT",Leader selected to run spinoff's retail stores - mySA
+28,1,"Thu, 12 Apr 2012 07:00:00 GMT",A New Chinese Export — Jobs - Time Magazine
+29,-1,"Mon, 23 Jul 2012 07:00:00 GMT",Study Says Antarctic Krill Harvesting Doesn’t Negatively Affect Ecosystem - WholeFoods Magazine
+30,1,"Thu, 23 Feb 2012 08:00:00 GMT",Monsanto And Cargill: The Thugs Of Big Food - Rainforest Action Network
+31,1,"Fri, 20 Apr 2012 07:00:00 GMT",Stephen O’Brien: Slowing global deforestation - GOV.UK
+32,1,"Thu, 20 Sep 2012 07:00:00 GMT",New power-dense 2.0L GDI turbo with twin-scroll turbocharger and new combustion system offered in 2013 Chevrolet Malibu - Green Car Congress
+33,1,"Thu, 21 Jun 2012 07:00:00 GMT",Tareq Al-Wazzan – Biography - Marcopolis
+34,1,"Wed, 25 Jul 2012 07:00:00 GMT",Caltex axes hundreds of jobs - ABC News
+35,1,"Thu, 26 Jan 2012 08:00:00 GMT","Husky Energy's SeaRose FPSO Prepares for Drydock at Harland and Wolff, the Builder of the Titanic - gCaptain"
+36,1,"Thu, 07 Jun 2012 07:00:00 GMT",Profiled: Top Upstream EPC Contractors 2012 - Oil and Gas Middle East
+37,1,"Fri, 21 Dec 2012 08:00:00 GMT",Supply chain management: managing contracts - Logistics Middle East
+38,1,"Mon, 06 Feb 2012 08:00:00 GMT",GAC Transfer Services opens Sri Lanka base - Logistics Middle East
+39,1,"Thu, 05 Jan 2012 08:00:00 GMT",Dirty fuel - Down To Earth Magazine
+40,1,"Thu, 05 Jan 2012 08:00:00 GMT",Petroleum products supply and distribution through pipelines and trucks - Vanguard
+41,1,"Thu, 12 Jul 2012 07:00:00 GMT",Shell maintains petrol prices as shortage persists - New Vision
