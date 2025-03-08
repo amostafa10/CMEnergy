@@ -83,6 +83,6 @@ if all_data:
 
     # Save the result to a CSV file, including the 'date' column
     final_data.to_csv('fredData.csv', index=False)
-    print("Data successfully written to 'daily_fred_data_after_2010_horizontal.csv'")
+    print("Data successfully written to 'fredData.csv'")
 else:
     print("No data to write.")
