@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 from datetime import datetime
 
-api_key = "ef84caaeb16b21f8c9dbc2840a8cc21f"
+api_key = "API KEY HERE"
 symbols = ["AMTMNO", "BOGMBASE", "CPIAUCSL", "GDPC1", "HOUST", "INDPRO", "NCBCMDPMVCE", "PCEC96", "PPIACO", "UNRATE"]
 
 def fetch_and_interpolate(symbol, api_key):
