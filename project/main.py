@@ -29,7 +29,7 @@ class OilFuturesApp:
         ctk.set_appearance_mode("dark")
         ctk.set_default_color_theme("blue")
 
-        self.root.iconbitmap(default="media/cme.ico")
+        self.root.iconbitmap(default="project/media/cme.ico")
 
         self.load_logo_image()
         
@@ -55,7 +55,7 @@ class OilFuturesApp:
 
     def load_logo_image(self):
         # Load an image (make sure to replace the path with your own image path)
-        logo_path = "media\cmelong.png"  # Replace this with the actual path to your logo
+        logo_path = "project/media/cmelong.png"  # Replace this with the actual path to your logo
         logo_image = Image.open(logo_path)  # Open the image file
         logo_image = logo_image.resize((200, 35))  # Resize image (optional)
         self.logo = ImageTk.PhotoImage(logo_image)  # Convert image to Tkinter-compatible format
