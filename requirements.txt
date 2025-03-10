@@ -9,3 +9,4 @@ matplotlib
 pmdarima
 darts
 auto-ts
+customtkinter
