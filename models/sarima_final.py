@@ -106,8 +106,8 @@ def grid_search(p_range=(0, 2), d_range=(0, 2), q_range=(0, 2),
 
 
 # Train model
-order = (0, 0, 0)
-seasonal_order = (0, 1, 2, 20) # assuming 20 as in 20 trading days
+order = (1,1,1)
+seasonal_order = (1, 1, 2, 20) # assuming 20 as in 20 trading days
 
 exog_train = train_data[exog_cols]
 
@@ -163,7 +163,7 @@ end = start + len(test_data) - 1
 # plt.show()
 
 # Start predicting the future
-steps = 30 # 30 days
+steps = 120 # 30 days
 
 # Generate future exogenous variables
 last_date = dataframe.index[-1]
@@ -189,7 +189,64 @@ for exog_var_col in exog_cols:
     model_fit = model.fit()
 
     exog_forecast = model_fit.forecast(steps=steps)
-    print(exog_forecast)
-    exog_future[exog_var_col] = exog_forecast
+
+    for i, result in enumerate(exog_forecast):
+        exog_future.at[exog_future.index[i], exog_var_col] = result
 
 print(exog_future)
+
+# predict future values, forecasting
+forecast = results.get_forecast(steps=steps, exog=exog_future.dropna())
+
+print(forecast)
+
+forecast_dates = pd.date_range(
+    start=last_date + pd.Timedelta(days=1),
+    periods=steps,
+    freq=frequency
+)
+
+mean_forecast = forecast.predicted_mean
+conf_int = forecast.conf_int()
+
+print(mean_forecast)
+print(conf_int)
+
+forecast_dataframe = pd.DataFrame({
+    'forecast': mean_forecast,
+    'lower_ci': conf_int.iloc[:, 0],
+    'upper_ci': conf_int.iloc[:, 1]
+}, index=forecast_dates)
+
+# put values into dataframe
+for i, result in enumerate(mean_forecast):
+    forecast_dataframe.at[forecast_dataframe.index[i], 'forecast'] = result
+
+for i in range(0, steps):
+    forecast_dataframe.at[forecast_dataframe.index[i], 'lower_ci'] = conf_int.at[conf_int.index[i], 'lower ' + target_col]
+    forecast_dataframe.at[forecast_dataframe.index[i], 'upper_ci'] = conf_int.at[conf_int.index[i], 'upper ' + target_col]
+
+print(forecast_dataframe)
+
+plt.figure(figsize=(12, 6))
+
+# Plot history (last 60 days for better visualization)
+plt.plot(dataframe.index, dataframe[target_col], label='Historical')
+
+# Plot forecast
+plt.plot(forecast_dataframe.index, forecast_dataframe['forecast'], label='Forecast', color='red')
+
+# Plot confidence intervals
+plt.fill_between(
+    forecast_dataframe.index,
+    forecast_dataframe['lower_ci'],
+    forecast_dataframe['upper_ci'],
+    color='pink', alpha=0.3
+)
+
+plt.title(f'{steps}-Period Forecast for {target_col}')
+plt.xlabel('Date')
+plt.ylabel(target_col)
+plt.legend()
+plt.grid(True)
+plt.show()
