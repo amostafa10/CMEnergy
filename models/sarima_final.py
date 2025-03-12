@@ -30,73 +30,76 @@ test_data = dataframe.iloc[split_idx:].copy()
 exog_cols = ["Open", "High", "Low", "Volume"]
 target_col = "Close"
 
-def grid_search(p_range=(0, 2), d_range=(0, 2), q_range=(0, 2), 
-                    P_range=(0, 2), D_range=(0, 1), Q_range=(0, 2), s=20):
-        """
-        Perform grid search to find optimal SARIMA parameters.
-        
-        Parameters:
-        - p_range, d_range, q_range: Ranges for ARIMA parameters
-        - P_range, D_range, Q_range: Ranges for seasonal ARIMA parameters
-        - s: Seasonal period
-        
-        Returns:
-        - Dictionary of best parameters
-        """
-        print("Starting grid search for optimal parameters...")
-        print("This may take some time...")
-        
-        best_aic = float('inf')
-        best_params = None
-        
-        # Create parameter combinations
-        p_params = range(p_range[0], p_range[1] + 1)
-        d_params = range(d_range[0], d_range[1] + 1)
-        q_params = range(q_range[0], q_range[1] + 1)
-        P_params = range(P_range[0], P_range[1] + 1)
-        D_params = range(D_range[0], D_range[1] + 1)
-        Q_params = range(Q_range[0], Q_range[1] + 1)
-        
-        # Get exogenous variables if specified
-        exog_train = train_data[exog_cols]
-        
-        # Grid search
-        for params in itertools.product(p_params, d_params, q_params, P_params, D_params, Q_params):
-            p, d, q, P, D, Q = params
-            
-            # Skip non-invertible models
-            if p + d + q + P + D + Q == 0:
-                continue
-                
-            try:
-                model = SARIMAX(
-                    train_data[target_col],
-                    exog=exog_train,
-                    order=(p, d, q),
-                    seasonal_order=(P, D, Q, s),
-                    enforce_stationarity=False,
-                    enforce_invertibility=False
-                )
-                
-                results = model.fit(disp=False)
-                aic = results.aic
-                
-                if aic < best_aic:
-                    best_aic = aic
-                    best_params = {
-                        'order': (p, d, q),
-                        'seasonal_order': (P, D, Q, s),
-                        'aic': aic
-                    }
-                    print(f"New best parameters: SARIMA{(p,d,q)}x{(P,D,Q,s)} - AIC: {aic}")
-            
-            except Exception as e:
-                continue
 
-        print(f"Best parameters: SARIMA{best_params['order']}x{best_params['seasonal_order']}")
-        print(f"Best AIC: {best_params['aic']}")
-        
-        return best_params
+def grid_search(p_range=(0, 2), d_range=(0, 2), q_range=(0, 2),
+                P_range=(0, 2), D_range=(0, 1), Q_range=(0, 2), s=20):
+    """
+    Perform grid search to find optimal SARIMA parameters.
+
+    Parameters:
+    - p_range, d_range, q_range: Ranges for ARIMA parameters
+    - P_range, D_range, Q_range: Ranges for seasonal ARIMA parameters
+    - s: Seasonal period
+
+    Returns:
+    - Dictionary of best parameters
+    """
+    print("Starting grid search for optimal parameters...")
+    print("This may take some time...")
+
+    best_aic = float('inf')
+    best_params = None
+
+    # Create parameter combinations
+    p_params = range(p_range[0], p_range[1] + 1)
+    d_params = range(d_range[0], d_range[1] + 1)
+    q_params = range(q_range[0], q_range[1] + 1)
+    P_params = range(P_range[0], P_range[1] + 1)
+    D_params = range(D_range[0], D_range[1] + 1)
+    Q_params = range(Q_range[0], Q_range[1] + 1)
+
+    # Get exogenous variables if specified
+    exog_train = train_data[exog_cols]
+
+    # Grid search
+    for params in itertools.product(p_params, d_params, q_params, P_params, D_params, Q_params):
+        p, d, q, P, D, Q = params
+
+        # Skip non-invertible models
+        if p + d + q + P + D + Q == 0:
+            continue
+
+        try:
+            model = SARIMAX(
+                train_data[target_col],
+                exog=exog_train,
+                order=(p, d, q),
+                seasonal_order=(P, D, Q, s),
+                enforce_stationarity=False,
+                enforce_invertibility=False
+            )
+
+            results = model.fit(disp=False)
+            aic = results.aic
+
+            if aic < best_aic:
+                best_aic = aic
+                best_params = {
+                    'order': (p, d, q),
+                    'seasonal_order': (P, D, Q, s),
+                    'aic': aic
+                }
+                print(
+                    f"New best parameters: SARIMA{(p, d, q)}x{(P, D, Q, s)} - AIC: {aic}")
+
+        except Exception as e:
+            continue
+
+    print(
+        f"Best parameters: SARIMA{best_params['order']}x{best_params['seasonal_order']}")
+    print(f"Best AIC: {best_params['aic']}")
+
+    return best_params
 
 
 # best_params = grid_search()
@@ -106,8 +109,8 @@ def grid_search(p_range=(0, 2), d_range=(0, 2), q_range=(0, 2),
 
 
 # Train model
-order = (1,1,1)
-seasonal_order = (1, 1, 2, 20) # assuming 20 as in 20 trading days
+order = (0, 0, 0)
+seasonal_order = (0, 1, 2, 20)  # assuming 20 as in 20 trading days
 
 exog_train = train_data[exog_cols]
 
@@ -122,8 +125,8 @@ model = SARIMAX(
 
 # Model trained
 results = model.fit(disp=False)
-print("Model training complete.")
-print(results.summary())
+# print("Model training complete.")
+# print(results.summary())
 
 # Test model
 exog_test = test_data[exog_cols]
@@ -163,7 +166,7 @@ end = start + len(test_data) - 1
 # plt.show()
 
 # Start predicting the future
-steps = 120 # 30 days
+steps = 120  # 30 days
 
 # Generate future exogenous variables
 last_date = dataframe.index[-1]
@@ -174,7 +177,7 @@ if frequency is None:
     most_common_diff = pd.Series(date_diffs).value_counts().index[0]
     frequency = most_common_diff
 
-print(frequency)
+# print(frequency)
 
 future_dates = pd.date_range(
     start=last_date + pd.Timedelta(days=1),
@@ -183,22 +186,60 @@ future_dates = pd.date_range(
 )
 
 exog_future = pd.DataFrame(index=future_dates)
+exog_sarimax_order = (1, 1, 1)
+exog_sarimax_seasonal_order = (1, 1, 1, 20)
 
 for exog_var_col in exog_cols:
-    model = ARIMA(dataframe[exog_var_col], order=(1, 1, 1))
-    model_fit = model.fit()
+    model = SARIMAX(
+        dataframe[exog_var_col],
+        order=exog_sarimax_order,
+        seasonal_order=exog_sarimax_seasonal_order,
+        enforce_stationarity=False,
+        enforce_invertibility=False
+    )
 
-    exog_forecast = model_fit.forecast(steps=steps)
+    # Model trained
+    exog_results = model.fit(disp=False)
+    # print(results.summary())
 
-    for i, result in enumerate(exog_forecast):
+    exog_forecast = exog_results.get_forecast(steps=steps)
+    exog_mean_forecast = exog_forecast.predicted_mean
+
+    # print(exog_forecast)
+    # print(exog_mean_forecast)
+
+    # model = ARIMA(dataframe[exog_var_col], order=(1, 1, 1))
+    # model_fit = model.fit()
+
+    # exog_forecast = model_fit.forecast(steps=steps)
+
+    for i, result in enumerate(exog_mean_forecast):
         exog_future.at[exog_future.index[i], exog_var_col] = result
 
-print(exog_future)
+# print(exog_future)
+
+n_exog = len(exog_cols)
+fig, axes = plt.subplots(n_exog, 1, figsize=(12, 3 * n_exog), sharex=True)
+
+# print(axes)
+
+for i, col in enumerate(exog_cols):
+    exog_axes = axes[i]
+
+    exog_axes.plot(dataframe.index, dataframe[col])
+    exog_axes.plot(exog_future.index,
+                   exog_future[col], color='red', label='Forecast')
+    exog_axes.set_title(f'Exogenous Variable: {col}')
+    exog_axes.grid(True)
+    exog_axes.legend()
+
+plt.tight_layout()
+plt.show()
 
 # predict future values, forecasting
 forecast = results.get_forecast(steps=steps, exog=exog_future.dropna())
 
-print(forecast)
+# print(forecast)
 
 forecast_dates = pd.date_range(
     start=last_date + pd.Timedelta(days=1),
@@ -210,7 +251,7 @@ mean_forecast = forecast.predicted_mean
 conf_int = forecast.conf_int()
 
 print(mean_forecast)
-print(conf_int)
+print(conf_int.iloc)
 
 forecast_dataframe = pd.DataFrame({
     'forecast': mean_forecast,
@@ -230,11 +271,12 @@ print(forecast_dataframe)
 
 plt.figure(figsize=(12, 6))
 
-# Plot history (last 60 days for better visualization)
+# Plot history
 plt.plot(dataframe.index, dataframe[target_col], label='Historical')
 
 # Plot forecast
-plt.plot(forecast_dataframe.index, forecast_dataframe['forecast'], label='Forecast', color='red')
+plt.plot(forecast_dataframe.index,
+         forecast_dataframe['forecast'], label='Forecast', color='red')
 
 # Plot confidence intervals
 plt.fill_between(
