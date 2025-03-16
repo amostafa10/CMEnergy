@@ -166,18 +166,16 @@ end = start + len(test_data) - 1
 # plt.show()
 
 # Start predicting the future
-steps = 120  # 30 days
+steps = 120 # days
 
 # Generate future exogenous variables
 last_date = dataframe.index[-1]
 frequency = pd.infer_freq(dataframe.index)
 
-if frequency is None:
+if frequency is None: # Get most common frequency
     date_diffs = dataframe.index[1:] - dataframe.index[:-1]
     most_common_diff = pd.Series(date_diffs).value_counts().index[0]
     frequency = most_common_diff
-
-# print(frequency)
 
 future_dates = pd.date_range(
     start=last_date + pd.Timedelta(days=1),
@@ -189,6 +187,7 @@ exog_future = pd.DataFrame(index=future_dates)
 exog_sarimax_order = (1, 1, 1)
 exog_sarimax_seasonal_order = (1, 1, 1, 20)
 
+# Predicting future exogenous variables
 for exog_var_col in exog_cols:
     model = SARIMAX(
         dataframe[exog_var_col],
