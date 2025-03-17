@@ -6,6 +6,7 @@ from statsmodels.tsa.statespace.sarimax import SARIMAX
 from statsmodels.tsa.arima.model import ARIMA
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 import warnings
+from crude_oil_forecaster import EnhancedCrudeOilForecaster
 
 warnings.filterwarnings("ignore")
 
@@ -166,79 +167,48 @@ end = start + len(test_data) - 1
 # plt.show()
 
 # Start predicting the future
-steps = 120 # days
+steps = 60  # days
 
 # Generate future exogenous variables
 last_date = dataframe.index[-1]
 frequency = pd.infer_freq(dataframe.index)
 
-if frequency is None: # Get most common frequency
+if frequency is None:  # Get most common frequency
     date_diffs = dataframe.index[1:] - dataframe.index[:-1]
     most_common_diff = pd.Series(date_diffs).value_counts().index[0]
     frequency = most_common_diff
 
-future_dates = pd.date_range(
-    start=last_date + pd.Timedelta(days=1),
-    periods=steps,
-    freq=frequency
-)
+# forecaster = EnhancedCrudeOilForecaster(lookback_period=30)
 
-exog_future = pd.DataFrame(index=future_dates)
-exog_sarimax_order = (1, 1, 1)
-exog_sarimax_seasonal_order = (1, 1, 1, 20)
+# file_path = 'data/yahoo_finance_2024.csv'
+# df = forecaster.load_data(file_path)
 
-# Predicting future exogenous variables
-for exog_var_col in exog_cols:
-    model = SARIMAX(
-        dataframe[exog_var_col],
-        order=exog_sarimax_order,
-        seasonal_order=exog_sarimax_seasonal_order,
-        enforce_stationarity=False,
-        enforce_invertibility=False
-    )
+# forecaster.train_exogenous_models(df, epochs=50)
+# exog_future = forecaster.forecast_exogenous(df, steps)
 
-    # Model trained
-    exog_results = model.fit(disp=False)
-    # print(results.summary())
-
-    exog_forecast = exog_results.get_forecast(steps=steps)
-    exog_mean_forecast = exog_forecast.predicted_mean
-
-    # print(exog_forecast)
-    # print(exog_mean_forecast)
-
-    # model = ARIMA(dataframe[exog_var_col], order=(1, 1, 1))
-    # model_fit = model.fit()
-
-    # exog_forecast = model_fit.forecast(steps=steps)
-
-    for i, result in enumerate(exog_mean_forecast):
-        exog_future.at[exog_future.index[i], exog_var_col] = result
-
+# print("\nForecasted Exogenous Variables:")
 # print(exog_future)
 
-n_exog = len(exog_cols)
-fig, axes = plt.subplots(n_exog, 1, figsize=(12, 3 * n_exog), sharex=True)
+# n_exog = len(exog_cols)
+# fig, axes = plt.subplots(n_exog, 1, figsize=(12, 3 * n_exog), sharex=True)
 
-# print(axes)
+# for i, col in enumerate(exog_cols):
+#     exog_axes = axes[i]
 
-for i, col in enumerate(exog_cols):
-    exog_axes = axes[i]
+#     exog_axes.plot(dataframe.index, dataframe[col])
+#     exog_axes.plot(exog_future.index,
+#                    exog_future[col], color='red', label='Forecast')
+#     exog_axes.set_title(f'Exogenous Variable: {col}')
+#     exog_axes.grid(True)
+#     exog_axes.legend()
 
-    exog_axes.plot(dataframe.index, dataframe[col])
-    exog_axes.plot(exog_future.index,
-                   exog_future[col], color='red', label='Forecast')
-    exog_axes.set_title(f'Exogenous Variable: {col}')
-    exog_axes.grid(True)
-    exog_axes.legend()
+# plt.tight_layout()
+# plt.show()
 
-plt.tight_layout()
-plt.show()
+exog_future = pd.read_csv('exogenous_forecasts_with_confidence.csv', parse_dates=['Date'], date_format='%Y-%m-%d', index_col='Date')
 
 # predict future values, forecasting
 forecast = results.get_forecast(steps=steps, exog=exog_future.dropna())
-
-# print(forecast)
 
 forecast_dates = pd.date_range(
     start=last_date + pd.Timedelta(days=1),
@@ -263,8 +233,10 @@ for i, result in enumerate(mean_forecast):
     forecast_dataframe.at[forecast_dataframe.index[i], 'forecast'] = result
 
 for i in range(0, steps):
-    forecast_dataframe.at[forecast_dataframe.index[i], 'lower_ci'] = conf_int.at[conf_int.index[i], 'lower ' + target_col]
-    forecast_dataframe.at[forecast_dataframe.index[i], 'upper_ci'] = conf_int.at[conf_int.index[i], 'upper ' + target_col]
+    forecast_dataframe.at[forecast_dataframe.index[i],
+                          'lower_ci'] = conf_int.at[conf_int.index[i], 'lower ' + target_col]
+    forecast_dataframe.at[forecast_dataframe.index[i],
+                          'upper_ci'] = conf_int.at[conf_int.index[i], 'upper ' + target_col]
 
 print(forecast_dataframe)
 
@@ -282,7 +254,8 @@ plt.fill_between(
     forecast_dataframe.index,
     forecast_dataframe['lower_ci'],
     forecast_dataframe['upper_ci'],
-    color='pink', alpha=0.3
+    color='pink', alpha=0.3,
+    label='95% Confidence Interval'
 )
 
 plt.title(f'{steps}-Period Forecast for {target_col}')
